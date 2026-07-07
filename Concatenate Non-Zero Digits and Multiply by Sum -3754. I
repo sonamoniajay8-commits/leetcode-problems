@@ -1,0 +1,21 @@
+class Solution {
+    public long sumAndMultiply(int n) {
+        n=Math.abs(n);
+        int  sum =0;
+        String num=Long.toString(n);
+        StringBuilder sb= new StringBuilder();
+        
+
+        for(char ch:num.toCharArray() ){
+            int dig=ch-'0';
+            sum+=dig;
+            if(dig!=0){   
+                sb.append(dig);
+            }
+        }
+        Long con = sb.length()==0?0: Long.parseLong(sb.toString());
+        Long result=con*sum;
+        return result;
+        
+    }
+}
