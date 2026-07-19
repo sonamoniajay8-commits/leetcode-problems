@@ -1,0 +1,14 @@
+class Solution {
+    public int mySqrt(int x) {
+       
+        //int root=(int) Mathsqrt(x);
+        int root = (int) Math.sqrt(x);
+        while (root*root==x){
+            return root;
+        }
+        
+        return root;
+        
+    }
+    
+}
